@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuildWithKhalil</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utilities.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Background Effects -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-container">
+        <a href="#" class="logo">BuildWithKhalil</a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section section" id="home">
+      <div id="heroTexts" class="hero-texts reveal-left">
+        <h1>Hi,</h1>
+        <h1>I'm Khalil</h1>
+        <h1 class="developer">Web Developer</h1>
+        <div class="hero-btns">
+          <button id="myWorkBtn" type="button" class="btn primary-btn">
+            My Work
+          </button>
+          <button id="hireMeBtn" type="button" class="btn outline-btn">
+            Hire Me
+          </button>
+        </div>
+      </div>
+      <div class="hero-visuals">
+        <figure id="heroImage" class="hero-image floating">
+          <img src="assets/hero-mobile.png" alt="Phone-Mockup" />
+        </figure>
+      </div>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section class="about-section section" id="about">
+        <h1 class="section-title">About Me</h1>
+        <div class="about-materials">
+          <figure id="aboutImage" class="about-image">
+            <img src="assets/animeprogrammer.webp" alt="My Photo" />
+          </figure>
+          <div id="aboutTexts" class="about-text">
+            <h2>Hello, I am Khalil Ahmed</h2>
+            <div class="about-para">
+              <p>
+                I am focused on building modern and responsive web applications
+                while transitioning toward full-stack development and AI-powered
+                applications. I focus on understanding how things work deeply
+                rather than memorizing syntax.
+              </p>
+              <p>
+                I have started my journey from an Islamic institution and
+                reached to one of the best colleges in Pakistan, and then turned
+                to own country and joined Bakhtar University for BCS.
+              </p>
+            </div>
+            <div class="about-btns">
+              <button class="myCV btn"><a href="#">My CV</a></button>
+              <button class="moreAboutMe btn">
+                <a href="#">More About Me</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skills-section section" id="skills">
+        <div class="skills-titles">
+          <h1 class="section-title skill-section-title" id="skillSectionTitle">
+            Skills
+          </h1>
+          <h2>Technologies I Use</h2>
+        </div>
+        <div class="skills-cards-container">
+          <div class="glass-card skill-card"><h3>HTML</h3></div>
+          <div class="glass-card skill-card"><h3>CSS</h3></div>
+          <div class="glass-card skill-card"><h3>JavaScript</h3></div>
+        </div>
+      </section>
+
+      <!-- Project Section -->
+      <section class="project-section section" id="projects">
+        <h1 class="section-title">Projects</h1>
+        <div class="project-card-container">
+          <!-- card-1 -->
+          <article class="glass-card project-card">
+            <figure class="project-image"></figure>
+            <div class="project-content">
+              <h3>Tic-Tac-Toe Game</h3>
+              <p>An offline game with two only players option</p>
+              <div class="project-buttons">
+                <button class="btn primary-btn">Live Demo</button>
+                <button class="btn secondary-btn">GitHub</button>
+              </div>
+            </div>
+          </article>
+          <!-- card-2 -->
+          <article class="glass-card project-card">
+            <figure class="project-image"></figure>
+            <div class="project-content">
+              <h3>Netflix Clone</h3>
+              <p>A basic clone of Netflix using only HTML, CSS and basic JS</p>
+              <div class="project-buttons">
+                <button class="btn primary-btn">Live Demo</button>
+                <button class="btn secondary-btn">GitHub</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section section" id="contact">
+        <div class="contact-titles">
+          <h1 class="section-title">Contact</h1>
+          <h2>Let's work together</h2>
+        </div>
+        <form
+          action="https://formspree.io/f/mvkpdlav"
+          method="post"
+          class="contact-form glass-card"
+          id="contactForm"
+        >
+          <input name="name" type="text" placeholder="Your Name" required />
+          <input name="email" type="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <input
+            type="hidden"
+            name="subject"
+            value="new message from my portfolio"
+          />
+          <button type="submit" class="btn primary-btn" id="sendBtn">
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+  </body>
+</html>
