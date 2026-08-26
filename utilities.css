@@ -30,6 +30,10 @@
 .secondary-btn:hover {
   background-color: rgba(168, 85, 247, 0.1);
 }
+.btn a{
+  text-decoration: none;
+  color: white;
+}
 
 /* Section Titles */
 .section-title {
