@@ -15,15 +15,14 @@ hireMeBtn.addEventListener("click", () => {
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      } else {
-        entry.target.classList.remove("active");
-      }
+     if (entry.isIntersecting) {
+       entry.target.classList.add("active");
+       observer.unobserve(entry.target);
+     }
     });
   },
   {
-    threshold: 0.3,
+    threshold: 0.2,
   },
 );
 
@@ -70,14 +69,16 @@ form.addEventListener("submit", (e) => {
     },
   })
     .then(function (response) {
-      if (response.ok) {
-        alert("Message sent successfully!");
-        location.reload();
-      
-      } else {
-          alert("Something went wrong. Please try again!");
-          location.reload();
-      }
+     if (response.ok) {
+       alert("Message sent successfully!");
+       form.reset();
+       btn.disabled = false;
+       btn.textContent = "Send Message";
+     } else {
+       alert("Something went wrong. Please try again!");
+       btn.disabled = false;
+       btn.textContent = "Send Message";
+     }
     })
     .catch(function () {
       alert("Unable to send the message. Please check your internet connection.");

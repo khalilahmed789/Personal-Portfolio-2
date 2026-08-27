@@ -122,11 +122,27 @@ nav .nav-links a:hover {
 }
 
 .hero-visuals {
-  flex: 0 1 clamp(260px, 35vw, 400px);
+  width: clamp(240px, 35vw, 380px);
+  animation: floatUpAndDown 3s ease-in-out infinite;
 }
 .hero-image {
   width: 100%;
   margin: 0;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease, transform 1s ease;
+
+}
+@keyframes floatUpAndDown {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }
 .hero-image img {
   display: block;
@@ -184,7 +200,8 @@ main {
   box-shadow: 0px 2px 8px 1px var(--primary);
 }
 .about-materials .about-text {
-  width: 50%;
+  width: 100%;
+  max-width: 650px;
   padding-top: 25px;
   display: flex;
   flex-direction: column;
@@ -205,8 +222,9 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 5rem;
-  width: 70vw;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  width: 100%;
+  max-width: 650px;
 }
 .about-text h2 {
   color: var(--secondary);
@@ -369,16 +387,14 @@ textarea {
     gap: 10px;
   }
   /* hero */
+  .hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
   .hero-btns button {
     font-size: 1.05rem;
-  }
-  .hero-image {
-    height: 480px;
-    width: 340px;
-  }
-  .hero-image img {
-    height: 100%;
-    width: 100%;
   }
 }
 /* Laptops */
@@ -460,9 +476,6 @@ textarea {
     justify-content: center;
     gap: 15px;
   }
-  .about-text .about-para {
-    width: 40vw;
-  }
   .about-text .about-btns {
     flex-direction: row;
   }
@@ -487,12 +500,12 @@ textarea {
   }
   /* Hero-Section */
   .hero-section {
-    max-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
 
   .hero-texts {
     font-size: 1.2rem;
@@ -540,9 +553,6 @@ textarea {
     align-items: center;
     justify-content: center;
     gap: 15px;
-  }
-  .about-text .about-para {
-    width: 40vw;
   }
   .about-text .about-btns {
     flex-direction: row;

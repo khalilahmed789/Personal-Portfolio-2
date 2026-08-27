@@ -29,7 +29,7 @@
 
     <!-- Hero Section -->
     <header class="hero-section section" id="home">
-      <div id="heroTexts" class="hero-texts reveal-left">
+      <div id="heroTexts" class="hero-texts">
         <h1>Hi,</h1>
         <h1>I'm Khalil</h1>
         <h1 class="developer">Web Developer</h1>
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="hero-visuals">
-        <figure id="heroImage" class="hero-image floating">
+        <figure id="heroImage" class="hero-image">
           <img src="assets/hero-mobile.png" alt="Phone-Mockup" />
         </figure>
       </div>
@@ -66,17 +66,26 @@
                 applications. I focus on understanding how things work deeply
                 rather than memorizing syntax.
               </p>
-              <p>
-                I have started my journey from an Islamic institution and
-                reached to one of the best colleges in Pakistan, and then turned
-                to own country and joined Bakhtar University for BCS.
-              </p>
+              <p>I started my journey at an Islamic institution, later studied at
+one of the best colleges in Pakistan, and eventually returned to
+my home country to pursue a BCS at Bakhtar University.</p>
             </div>
             <div class="about-btns">
-              <a href="./myCV.pdf" rel="noonpener noreferrer" class="btn secondary-btn">My CV</a>
-              <button class="secondary-btn btn">
-                <a href="https://github.com/khalilahmed789">My Code</a>
-              </button>
+              <a 
+              href="./myCV.pdf"
+              target="_blank"
+              rel="noonpener noreferrer"
+              class="btn secondary-btn">
+              My CV
+            </a>
+                <a
+  href="https://github.com/khalilahmed789"
+  class="btn secondary-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  My Code
+</a>
             </div>
           </div>
         </div>
@@ -91,9 +100,15 @@
           <h2>Technologies I Use</h2>
         </div>
         <div class="skills-cards-container">
-          <div class="glass-card skill-card"><h3>HTML</h3></div>
-          <div class="glass-card skill-card"><h3>CSS</h3></div>
+          <div class="glass-card skill-card"><h3>HTML5</h3></div>
+          <div class="glass-card skill-card"><h3>CSS3</h3></div>
           <div class="glass-card skill-card"><h3>JavaScript</h3></div>
+        </div>
+          <h2>Technologies I Am Exploring</h2>
+        <div class="skills-cards-container">
+          <div class="glass-card skill-card"><h3>C++</h3></div>
+          <div class="glass-card skill-card"><h3>Database</h3></div>
+          <div class="glass-card skill-card"><h3>Advanced JS</h3></div>
         </div>
       </section>
 
@@ -106,11 +121,25 @@
             <figure class="project-image"></figure>
             <div class="project-content">
               <h3>Tic-Tac-Toe Game</h3>
-              <p>An offline game with two only players option</p>
+              <p>A two-player offline Tic-Tac-Toe game built with HTML, CSS, and JavaScript.</p>
               <div class="project-buttons">
-                <button class="btn primary-btn"><a href="https://tic-tac-toc-game-seven.vercel.app/">Live Demo</a></button>
-                <button class="btn secondary-btn"><a href="https://github.com/khalilahmed789/Tic-Tac-Toc-Game/tree/main">GitHub</a></button>
-              </div>
+                <a
+  href="https://tic-tac-toc-game-seven.vercel.app/"
+  class="btn primary-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Live Demo
+</a>
+
+<a
+  href="https://github.com/khalilahmed789/Tic-Tac-Toc-Game/tree/main"
+  class="btn secondary-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  GitHub
+</a>
             </div>
           </article>
           <!-- card-2 -->
@@ -118,10 +147,25 @@
             <figure class="project-image"></figure>
             <div class="project-content">
               <h3>Netflix Clone</h3>
-              <p>A basic clone of Netflix using only HTML, CSS and basic JS</p>
+              <p>A Netflix-inspired interface built with HTML, CSS, and JavaScript.</p>
               <div class="project-buttons">
-                <button class="btn primary-btn"><a href="liveDemo.html">Live Demo</a></button>
-                <button class="btn secondary-btn"><a href="https://github.com/khalilahmed789/Netflic-Clone">GitHub</a></button>
+               <a
+  href="./liveDemo.html"
+  class="btn primary-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Live Demo
+</a>
+
+<a
+  href="https://github.com/khalilahmed789/Netflix-Clone"
+  class="btn secondary-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  GitHub
+</a>
               </div>
             </div>
           </article>
@@ -155,11 +199,14 @@
           <button type="submit" class="btn primary-btn" id="sendBtn">
             Send Message
           </button>
+          <p id="formStatus" aria-live="polite"></p>
         </form>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+  <p>© 2026 BuildWithKhalil. All rights reserved.</p>
+</footer>
   </body>
 </html>
