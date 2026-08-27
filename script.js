@@ -58,6 +58,7 @@ form.addEventListener("submit", (e) => {
 
   btn.disabled = true;
   btn.textContent = "Sending...";
+  formStatus.className = "";
   formStatus.textContent = "";
 
   const formData = new FormData(form);
@@ -71,12 +72,14 @@ form.addEventListener("submit", (e) => {
   })
     .then((response) => {
       if (response.ok) {
+        formStatus.className = "success";
         formStatus.textContent = "Message sent successfully!";
         form.reset();
 
         btn.disabled = false;
         btn.textContent = "Send Message";
       } else {
+        formStatus.className = "error";
         formStatus.textContent = "Something went wrong. Please try again.";
 
         btn.disabled = false;
@@ -84,6 +87,7 @@ form.addEventListener("submit", (e) => {
       }
     })
     .catch(() => {
+      formStatus.className = "error"
       formStatus.textContent =
         "Unable to send the message. Please check your internet connection.";
 
