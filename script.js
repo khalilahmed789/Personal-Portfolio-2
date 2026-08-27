@@ -51,16 +51,17 @@ glassCard.forEach((card) => {
 // Contact form
 const form = document.querySelector("#contactForm");
 const btn = document.querySelector("#sendBtn");
+const formStatus = document.querySelector("#formStatus");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Change Button State
   btn.disabled = true;
   btn.textContent = "Sending...";
+  formStatus.textContent = "";
 
-  // Collect form data
   const formData = new FormData(form);
+
   fetch(form.action, {
     method: "POST",
     body: formData,
@@ -68,20 +69,23 @@ form.addEventListener("submit", (e) => {
       Accept: "application/json",
     },
   })
-    .then(function (response) {
-     if (response.ok) {
-       alert("Message sent successfully!");
-       form.reset();
-       btn.disabled = false;
-       btn.textContent = "Send Message";
-     } else {
-       alert("Something went wrong. Please try again!");
-       btn.disabled = false;
-       btn.textContent = "Send Message";
-     }
+    .then((response) => {
+      if (response.ok) {
+        formStatus.textContent = "Message sent successfully!";
+        form.reset();
+
+        btn.disabled = false;
+        btn.textContent = "Send Message";
+      } else {
+        formStatus.textContent = "Something went wrong. Please try again.";
+
+        btn.disabled = false;
+        btn.textContent = "Send Message";
+      }
     })
-    .catch(function () {
-      alert("Unable to send the message. Please check your internet connection.");
+    .catch(() => {
+      formStatus.textContent =
+        "Unable to send the message. Please check your internet connection.";
 
       btn.disabled = false;
       btn.textContent = "Send Message";

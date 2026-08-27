@@ -64,3 +64,10 @@ a{
   text-align: center;
   font-size: 0.95rem;
 }
+#formStatus.success {
+  color: #4ade80;
+}
+
+#formStatus.error {
+  color: #f87171;
+}
