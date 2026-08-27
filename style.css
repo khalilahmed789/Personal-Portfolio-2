@@ -88,13 +88,6 @@ nav .nav-links a:hover {
   color: var(--primary);
 }
 
-/* header {
-  background:
-    radial-gradient(circle at 0% 0%, var(--secondary-bg), transparent 20%),
-    radial-gradient(circle at 100% 50%, var(--secondary-bg), transparent 35%),
-    linear-gradient(135deg, #0b0b12, #0a0a18);
-} */
-
 /* Hero-Section */
 .hero-section {
   min-height: calc(100vh - 80px);
@@ -156,12 +149,6 @@ main {
 /* About Section */
 .about-section {
   min-height: 90vh;
-  /* background: linear-gradient(
-    45deg,
-    var(--secondary-bg),
-    var(--primary-bg),
-    var(--primary-bg)
-  ); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,19 +199,17 @@ main {
   opacity: 1;
   transform: translateX(0);
 }
-.about-text h2 {
-  color: var(--secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 .about-text .about-para {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 1.5rem;
+  padding: 5rem;
+  width: 70vw;
+}
+.about-text h2 {
+  color: var(--secondary);
 }
 .about-text .about-para p {
   color: var(--secondary-text);
@@ -243,11 +228,6 @@ main {
 }
 .about-btns button {
   padding: 0.8rem 1.19rem;
-  border: 2px solid var(--primary);
-  background-color: transparent;
-}
-.about-btns button:hover {
-  background-color: rgba(168, 85, 247, 0.1);
 }
 .about-btns button a {
   text-decoration: none;
@@ -470,9 +450,6 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transform: translateX(-100px);
-    opacity: 0;
-    animation: 5s ease; */
   }
   .about-materials .about-text {
     width: 50%;
@@ -482,6 +459,9 @@ textarea {
     align-items: center;
     justify-content: center;
     gap: 15px;
+  }
+  .about-text .about-para {
+    width: 40vw;
   }
   .about-text .about-btns {
     flex-direction: row;
@@ -551,9 +531,6 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transform: translateX(-100px);
-    opacity: 0;
-    animation: 5s ease; */
   }
   .about-materials .about-text {
     padding-top: 0;
@@ -563,6 +540,9 @@ textarea {
     align-items: center;
     justify-content: center;
     gap: 15px;
+  }
+  .about-text .about-para {
+    width: 40vw;
   }
   .about-text .about-btns {
     flex-direction: row;
