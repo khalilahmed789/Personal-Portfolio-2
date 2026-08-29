@@ -17,6 +17,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
 }
 
 html {
@@ -122,7 +123,7 @@ nav .nav-links a:hover {
 }
 
 .hero-visuals {
-  width: clamp(240px, 35vw, 380px);
+  width: clamp(280px, 40vw, 480px);
   animation: floatUpAndDown 3s ease-in-out infinite;
 }
 .hero-image {
@@ -283,7 +284,7 @@ main {
 }
 .skill-card {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   font-weight: 600;
   padding: clamp(1rem, 3vw, 3rem);
   transition: 0.4s ease;
