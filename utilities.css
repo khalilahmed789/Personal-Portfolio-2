@@ -10,8 +10,8 @@
   border: none;
   padding: 1rem 2rem;
   border-radius: 999px;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 550;
   transition: var(--transition);
 }
 .primary-btn {
